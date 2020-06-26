@@ -1,0 +1,24 @@
+{
+  "name": "mcq-html",
+  "version": "1.0.0",
+  "description": "this is only for mcq html changes",
+  "main": "audio_mapping.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sidharajswaminathan/mcq_html.git"
+  },
+  "author": "sidharaj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sidharajswaminathan/mcq_html/issues"
+  },
+  "homepage": "https://github.com/sidharajswaminathan/mcq_html#readme",
+  "devDependencies": {
+    "fs": "0.0.1-security",
+    "replace": "^1.2.0",
+    "util": "^0.12.3"
+  }
+}
