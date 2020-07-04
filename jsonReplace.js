@@ -67,10 +67,10 @@ remove_linebreaks = async(tt) =>{
 
 callMe = async() => {
     /* get commitedJSON and process again for audio files */
-    let audioJSON_input = `55be90f9b7ba4be087e6fe13ead6fe9b.json
-95188ba0c4ee4252a8ec0b2f2ea27019.json
-bce69de5d12643de9f9dace090b56d6e.json
-c6eba4a846ba448984732a7eeb7d53a9.json`;
+    let audioJSON_input = `36b50e742a2f458b8d1ee8295a0e1127.json
+a5702edb1c0c4ede954b4e9b7e10c0f7.json
+afb2daea4814418b8480c734f6c4804b.json
+e48a803185544102b27eebca9d6460df.json`;
 
     //console.log(audioJSON_input);
     let finalCombinedStr = await remove_linebreaks(audioJSON_input);
@@ -79,7 +79,13 @@ c6eba4a846ba448984732a7eeb7d53a9.json`;
     const htmlEnd = "assets/modules/hmh.mcq_mrq/widgets/explib_mcq_mrq/index.html";
     let htmlData = await propsUpdate(htmlStart,htmlEnd,filepath);
     console.log("All html mcq changes are completed!!!");
-
+	// <param name="theme" value="undefined" />
+	//   '\"<param name\"="theme" value\"="undefined" />';
+	const html_lma_Start = '<param name="theme" value="undefined" />';
+    const html_lma_End = "";
+    let html_lma_Data = await propsUpdate(html_lma_Start,html_lma_End,filepath);
+	console.log("All html lma changes are completed!!!");
+	
     console.log(audioArr);
     asyncForEach_one(audioArr, async (file) => {
         let fileName = file.trim();
